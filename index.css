@@ -1,0 +1,150 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: "Roboto";
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+h1{
+    color: white;
+    margin-right: 5rem;
+}
+i,svg{
+    pointer-events: none;
+}
+.kick-pad,.snare-pad,.hithat-pad
+{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+    border-radius: 25%;
+
+}
+.kick-pad
+{
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    filter: brightness(30%);
+}
+.snare-pad
+{
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    filter: brightness(30%);
+}
+.hithat-pad
+{
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    filter: brightness(30%);
+}
+.sequencer
+{display:flex;
+ min-height: 100vh;   
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+
+}
+.controls
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0rem 2rem;
+}
+
+.hithat-track,
+.snare-track,
+.kick-track
+{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    margin-top: 5rem;
+
+}
+select
+{
+    margin-left: 2rem;
+    outline: none;
+    border-radius: 25%;
+    padding: 1rem;
+    font-size: 1rem;
+    
+}
+option{
+    border-radius: 12%;
+}
+
+.kick,
+.snare,
+.hithat
+{
+    display: flex;
+}
+.mute
+{
+    filter: brightness(40%);
+}
+
+.controls button
+{
+    padding: 1rem;
+    border: none;
+    background-color: #DCD9D4;
+ background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+ background-blend-mode: soft-light,screen;
+ border-radius: 25%;
+ outline: none;
+ cursor: pointer;
+ transition: all 0.5s ease;
+ 
+}
+.play
+{padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+ background-blend-mode: soft-light,screen;
+ border-radius: 25rem;
+ margin-top: 2rem;
+ outline: none;
+ cursor: pointer;
+    
+
+}
+.kick-pad.active
+{
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    filter: brightness(100%);
+}
+.snare-pad.active
+{
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    filter: brightness(100%);
+}
+.hithat-pad.active
+
+{
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    filter: brightness(100%);
+}
+@keyframes playTrack {
+    from
+    {
+        transform:scale(1);
+    }
+    to
+    {
+        transform: scale(1.2);
+    }
+}
+.mute.active{
+    filter: brightness(200%);
+
+}
